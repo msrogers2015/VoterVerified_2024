@@ -1,0 +1,2 @@
+--General Information about how officals counted votes
+select marker_method, count(*) as "count", printf("%,d", sum(registration)) as "Registered Voters" from officals group by marker_method order by sum(registration) desc;
